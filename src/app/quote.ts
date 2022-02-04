@@ -1,5 +1,5 @@
 export class Quote {
-    text! : string;
+    name! : string;
     author! : string;
     person! : string;
 }
