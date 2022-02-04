@@ -1,6 +1,15 @@
 # QuotesApp
 
+Repo link https://github.com/macc254/Quotes-App.git
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
+
+## Author
+Mercy Bore
+## Description
+This is an angular app that allows you to contribute a quote the owner and whoever is submitting it.You will be able to view how much time has elapsed since you created your quote and the number of upvotes and downvotes that it will have. 
+
+
 
 ## Development server
 
