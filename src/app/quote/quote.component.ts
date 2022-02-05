@@ -16,6 +16,11 @@ export class QuoteComponent implements OnInit {
   toggleAuthor(index: any){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
   }
+  completeQuote(isComplete: any, index: number){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {

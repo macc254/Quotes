@@ -7,7 +7,7 @@
                 {{quote.name}}
             </li>
             <button (click)='toggleAuthor(i)'>Toggle Author</button>
-            <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
+            <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
         </div>
 
     </ul>
