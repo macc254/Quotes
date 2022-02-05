@@ -5,9 +5,9 @@
         <div *ngFor='let quote of quotes; let i = index'>
             <li appHighlight>
                 {{quote.name}}
-                <br>Posted on: {{quote.quoteDate|date|uppercase}} </li>
+                <br>Posted on: {{quote.quoteDate}} </li>
             <button (click)='toggleAuthor(i)'>By:</button>
-            <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
+            <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
         </div>
 
     </ul>

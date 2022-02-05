@@ -6,6 +6,9 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   quotes: Quote[] = [
    new Quote('The greatest glory in living lies not in never falling, but in rising every time we fall. ','Nelson Mandela','Mercy Bore',new Date(2020,3,13)),
    new Quote('The way to get started is to quit talking and begin doing.','Walt Disney','Mercy Bore',new Date(2020,3,13)),
@@ -16,14 +19,14 @@ export class QuoteComponent implements OnInit {
   toggleAuthor(index: any){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
   }
-  completeQuote(isComplete: any, index: number){
+  deleteQuote(isComplete: any, index: number){
     if (isComplete) {
-      this.quotes.splice(index,1);
-    }
-  }
-  constructor() { }
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
-  ngOnInit(): void {
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
   }
 
 }
