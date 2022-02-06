@@ -1,7 +1,7 @@
 <div class="container-fluid">
-    <h2 class="text-center">Add A New Quote:</h2>
+    <h2 class="text-center">Add A New Quote</h2>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-        <div class="form-group">
+        <div class="form-group card">
 
             <label for="name">Quote:</label>
             <textarea class="form-control" id="name" rows="4" required [(ngModel)]="newQuote.name" name="name" #name='ngModel'></textarea>
@@ -9,7 +9,7 @@
                 <p>Quote is required</p>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group card">
 
             <label for="author">Author:</label>
             <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel'>
@@ -26,8 +26,8 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="date">On the day:</label>
-            <input type='date' class="form-control" id="date" required [(ngModel)]="newQuote.quoteDate" name="quoteDate" #quoteDate='ngModel'>
+            <label for="quoteDate">On the day:</label>
+            <input type='date' class="form-control" id="quoteDate" required [(ngModel)]="newQuote.quoteDate" name="quoteDate" #quoteDate='ngModel'>
 
         </div>
         <button type="submit" class="btn btn-success">Post Quote</button>
