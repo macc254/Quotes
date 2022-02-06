@@ -1,3 +1,7 @@
 <p>{{quote.author}}</p>
-<p>This quote was posted {{quote.quoteDate|date}} days ago</p>
+<p>This quote was posted {{quote.quoteDate|date}}days ago</p>
+<h4>Vote for this quote:</h4>
+<div><button class="vote btn btn-success mr-4" (click)='addvote(quote)'> Like </button> <span class="votes">  {{quote.upvote}}</span></div><br>
+<div><button class="vote btn btn-danger" (click)='reducevote(quote)'>Dislike </button> <span class="votes">   {{quote.downvote}}</span ></div><br>
+               
 <button (click)='quoteDelete(true)' class='btn btn-danger'>Delete Quote</button>

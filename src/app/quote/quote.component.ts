@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quote } from '../quote';
 @Component({
   selector: 'app-quote',
@@ -6,6 +6,8 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  @Input() quote!:Quote;
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -28,5 +30,11 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-
+  addNewQuote(quote: Quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.quoteDate = new Date(quote.quoteDate)
+    this.quotes.push(quote)
+  }
+ 
 }
