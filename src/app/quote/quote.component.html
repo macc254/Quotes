@@ -1,4 +1,4 @@
-<div class="container ">
+<div class="container">
     <div class="row">
         <div class="col-md-6">
 
@@ -7,16 +7,16 @@
         </div>
         <div class="col-md-6 ">
             <h2 class="text-center">Here are a few sample quotes</h2>
-            <div *ngFor='let quote of quotes; let i = index' class="card">
+            <div *ngFor='let quote of quotes; let i = index' class="card ">
                 <div>
-                    <div class="text-center">{{quote.name}}</div>
+                    <div class="text-center text-success">{{quote.name}}</div>
                     <br>Posted on: {{quote.quoteDate}}<br>
 
                     <button (click)='toggleAuthor(i)' class='btn btn-primary'>Author and Vote:</button>
                     <div *ngIf='quote.showAuthor'>
                         <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
                     </div>
-                </div>
+                </div><br>
 
 
             </div>
