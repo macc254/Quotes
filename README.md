@@ -33,7 +33,6 @@ https://macc254.github.io/Quotes-App/
 
 ## License
 This project is under the  [MIT](license) license
-This project is under the [MIT]  License
 
 Copyright (c) [2022] [Mercy Bore.]
 
